@@ -1,0 +1,108 @@
+.section__warning {
+  background-color: $color-inverse-background;
+}
+
+.warning {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 70px;
+  padding: 0;
+
+  &__unprotected {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: $color-secondary-accent;
+
+    &::before {
+      content: ' ';
+      display: inline-block;
+      width: 24px;
+      height: 19px;
+      background-image: url('../images/warning.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__learnMore {
+    color: white;
+  }
+
+  &__ip,
+  &__isp {
+    font-size: 12px;
+    color: $color-secondary-text;
+    text-align: center;
+  }
+
+  &__ipJS,
+  &__ispJS {
+    display: inline-block;
+  }
+
+  &__close {
+    // justify-self: flex-end;
+    margin: 10px 10px 0 0;
+    color: $color-secondary-text;
+
+    @include warning {
+      margin: 8px 10px 0;
+    }
+  }
+
+  @include warning {
+    min-height: 40px;
+  }
+}
+
+.warningMobile {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  width: 100%;
+  min-height: 70px;
+  padding: 10px 4px 10px 20px;
+
+  &__top,
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 375px;
+    gap: 10px;
+  }
+
+  @include warning {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.warningDesktop {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+
+  @include warning {
+    display: flex;
+    opacity: 1;
+    pointer-events: initial;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    padding: 10px 10px 10px 20px;
+    gap: 32px;
+  }
+}

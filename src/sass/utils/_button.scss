@@ -2,7 +2,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 11px 25px;
+  padding: 11px 15px;
   min-width: 90px;
   height: 40px;
 
@@ -16,13 +16,13 @@
   border-radius: 50px;
   cursor: pointer;
 
-  &-primary {
+  &__primary {
     background: $color-accent-text;
     background: linear-gradient($gradient-button);
     color: $color-inverse-text;
   }
 
-  &-secondary {
+  &__secondary {
     border: 1px solid $color-accent-text;
     border-color: $color-accent-text;
     color: $color-accent-text;

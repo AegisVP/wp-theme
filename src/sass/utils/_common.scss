@@ -24,6 +24,7 @@ body {
 
   color: $color-default-text;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.03em;
 
@@ -50,16 +51,20 @@ body {
     flex: 0 0 auto;
   }
 
-  outline: $outline;
+  outline: $outline; //////////////////////////////////////////
 }
 
 .container {
   margin: 0 auto;
   padding: 0;
 
-  // width: 1280px;
+  max-width: 375px;
 
-  outline: $outline;
+  @include desktop {
+    max-width: 1200px;
+  }
+
+  outline: $outline; ///////////////////////////////////////////
 }
 
 ul {
@@ -73,6 +78,7 @@ p {
   padding: 0;
 }
 
-.icon {
+.icon,
+svg {
   fill: currentColor;
 }
