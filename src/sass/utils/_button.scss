@@ -1,0 +1,45 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 25px;
+  min-width: 90px;
+  height: 40px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  border-radius: 50px;
+  cursor: pointer;
+
+  &-primary {
+    background: $color-accent-text;
+    background: linear-gradient($gradient-button);
+    color: $color-inverse-text;
+  }
+
+  &-secondary {
+    border: 1px solid $color-accent-text;
+    border-color: $color-accent-text;
+    color: $color-accent-text;
+  }
+
+  // transition: box-shadow 250ms $animation-time-function 100ms;
+
+  // &:hover,
+  // &:focus {
+  //   background-color: $button-hover-color;
+  //   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+  //     0px 1px 2px rgba(0, 0, 0, 0.08),
+  //     0px 2px 2px rgba(0, 0, 0, 0.12);
+  //   outline: none;
+  // }
+}
+
+.button--inline {
+  display: inline-flex;
+}
